@@ -1,23 +1,20 @@
-import logo from './logo.svg';
+import Navbar from "./components/navbar"
+import Todo from "./components/Todos/Todo"
+import Task from "./components/Task/task"
 import './App.css';
+import Todolist from "./components/Todos/Todolist";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <div className="flex flex-row">
+        <div className="flex flex-col bg-white">
+          <Todo />
+          <Todolist />
+        </div>
+        <Task />
+      </div>
     </div>
   );
 }
